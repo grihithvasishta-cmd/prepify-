@@ -1,0 +1,38 @@
+prepify-ai/
+├── app/
+│   ├── __init__.py
+│   ├── main.py              # FastAPI app entry point
+│   ├── config.py            # Environment variables & settings
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── v1/
+│   │   │   ├── endpoints.py # API route definitions
+│   │   │   └── ...
+│   ├── models/              # Database models (SQLAlchemy/SQLModel)
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   ├── document.py
+│   │   └── exam.py
+│   ├── schemas/             # Pydantic models (Request/Response)
+│   │   ├── __init__.py
+│   │   └── document.py
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── security.py      # Auth & JWT
+│   │   └── database.py      # DB Session management
+│   ├── services/            # BUSINESS LOGIC LAYER
+│   │   ├── __init__.py
+│   │   ├── processor.py     # Universal Input Pipeline
+│   │   ├── embedding.py     # Vector Store & RAG
+│   │   ├── generator.py     # Notes & Content Generation
+│   │   ├── tutor.py         # AI Doubt Solver
+│   │   └── exporter.py      # PDF/DOCX Export
+│   ├── workers/             # Celery Tasks
+│   │   ├── __init__.py
+│   │   └── tasks.py
+│   └── utils/
+│       ├── __init__.py
+│       └── helpers.py
+├── requirements.txt
+├── Dockerfile
+└── docker-compose.yml
